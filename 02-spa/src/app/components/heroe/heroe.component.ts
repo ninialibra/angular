@@ -8,7 +8,7 @@ import { HeroesService } from '../../servicios/heroes.service';
   styles: [
   ]
 })
-export class HeroeComponent {
+export class HeroeComponent { 
 
   heroe:any={};
 
