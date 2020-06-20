@@ -18,6 +18,11 @@
                     <td>{{nombre|uppercase}}</td>
                 </tr>
                 <tr>
+                    <td>{{nombre2}}</td>
+                    <td>capitalizado</td>
+                    <td>{{nombre2|capitalizado}}</td>
+                </tr>
+                <tr>
                     <td>{{nombre}}</td>
                     <td>lowercase</td>
                     <td>{{nombre|lowercase}}</td>
@@ -94,9 +99,16 @@
                 </tr>
                 <tr>
                     <td>{{fecha}}</td>
-                    <td>date:'MMMM-dd'</td>
-                    <td>{{fecha|date:'MMMM-dd'}}</td>
+                    <td>
+                        date:'MMMM-dd':'':idioma
+                        <br>
+                        <button class="btn btn-primary mr-1" (click)="cambiaIdioma('es')">Español</button>
+                        <button class="btn btn-secondary mr-1" (click)="cambiaIdioma('en')">Inglés</button>
+                        <button class="btn btn-success mr-1" (click)="cambiaIdioma('fr')">Francés</button>
+                    </td>
+                    <td>{{fecha|date:'MMMM-dd':'':idioma}}</td>
                 </tr>
+
             </tbody>
         </table>
 
