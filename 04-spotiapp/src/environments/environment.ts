@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  token_spotify: "Bearer BQDxi3br6sZq2i61xT0shKGw4OhkXPMXzOGzf-zlGxhgPnno54IAcemcRWXAaDRAGgrz2XC1G51SropM3FM"
-};
+  token_spotify: "Bearer BQBXLh4UhmwLEK8tQ9S5Pq_klObjRAAegzC1UOs_hpI8Cr7tzeDwczr7YC-XjoWW37E6Ci5QtyM5PtsZUOc"
+}; 
 
 /*
  * For easier debugging in development mode, you can import the following file
