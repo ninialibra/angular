@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  token_spotify: "Bearer BQBXLh4UhmwLEK8tQ9S5Pq_klObjRAAegzC1UOs_hpI8Cr7tzeDwczr7YC-XjoWW37E6Ci5QtyM5PtsZUOc"
+  token_spotify: "Bearer BQAxcrmLsXwHhqiestawPEpbegpbTN3W0cZuehoGC9kFOXVnEfiKNeu9bOH4dPZmC4QNm4yPIJQmAqVTTfc"
 }; 
 
 /*
