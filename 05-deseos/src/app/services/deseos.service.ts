@@ -22,6 +22,11 @@ export class DeseosService {
     return nuevaLista.id;
   }
 
+  editarLista(lista:Lista, titulo:string){
+    lista.titulo = titulo;
+    this.guardarStorage();
+  }
+
   borrarLista(lista:Lista){
     this.listas = this.listas.filter(listaData=>listaData.id!==lista.id);
     this.guardarStorage();
