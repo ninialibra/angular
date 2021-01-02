@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
 import { UsuarioModel } from '../../models/usuario.model';
 
 @Component({
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   usuario:UsuarioModel;
 
-  constructor() { }
+  constructor(private auth:AuthService) { }
 
   ngOnInit() {
 
@@ -25,8 +26,13 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    console.log(form);
-    console.log(this.usuario);
+    this.auth.login(this.usuario)
+      .subscribe(resp=>{
+        console.log(resp);        
+      },(e)=>{
+        console.log(e.error.error.message);
+        
+      });
 
   }
 
