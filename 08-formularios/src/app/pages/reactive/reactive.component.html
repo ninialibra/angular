@@ -1,6 +1,6 @@
 <h4>Formularios <small> reactivos </small></h4>
 <hr>
-<form autocomplete="off">
+<form autocomplete="off" [formGroup]="formu" (ngSubmit)="guardar()" >
 
   <div>
 
@@ -10,6 +10,7 @@
 
         <input class="form-control"
                type="text"
+               formControlName="nombre"
                placeholder="Nombre">
       </div>
     </div>
@@ -20,6 +21,7 @@
 
         <input class="form-control"
                type="text"
+               formControlName="apellido"
                placeholder="Apellido">
       </div>
     </div>
@@ -32,6 +34,7 @@
 
       <input class="form-control"
              type="email"
+             formControlName="correo"
              placeholder="Correo electrónico">
     </div>
   </div>
