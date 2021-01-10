@@ -49,6 +49,46 @@
     </div>
   </div>
 
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Usuario</label>
+    <div class="col">
+      <input
+        class="form-control"
+        type="text"
+        [class.is-invalid]="usuarioNoValido"
+        formControlName="usuario"
+        placeholder="Nombre de usuario"
+      />
+      <small class="text-danger" *ngIf="usuarioNoValido">Nombre de usuario ya existente</small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Contraseña</label>
+    <div class="col">
+      <input
+        class="form-control"
+        type="password"
+        [class.is-invalid] = "pass1NoValido"
+        formControlName="pass1"
+        placeholder="Contraseña"
+      />
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Repita contraseña</label>
+    <div class="col">
+      <input
+        class="form-control"
+        type="password"
+        [class.is-invalid] = "pass2NoValido"
+        formControlName="pass2"
+        placeholder="Repita contraseña"
+      />
+    </div>
+  </div>
+
   <div class="form-group row" formGroupName="direccion">
     <label class="col-2 col-form-label">Dirección</label>
     <div class="form-row col">
@@ -83,14 +123,14 @@
               <input type="text" class="form-control" [formControlName]="i">
             </td>
             <td>
-              <button class="btn btn-danger">Borrar</button>
+              <button class="btn btn-danger" type="button" (click)="borrarPasatiempo(i)">Borrar</button>
             </td>
           </tr>
         </tbody>
       </table>
 
       <button class="mt-3 btn btn-primary mb-5 btn-block"
-              type="button">+ Agregar</button>
+              type="button" (click)="agregarPasatiempo()">+ Agregar</button>
 
     </div>
   </div>
