@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<table class="table mt-3 animate__animated animate__fadeIn animate__slow">
+<table *ngIf="!cargando && heroes.length>0" class="table mt-3 animate__animated animate__fadeIn animate__slow">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
@@ -36,7 +36,7 @@
             <i class="fa fa-pen"></i>
           </button>
 
-          <button class="btn btn-danger">
+          <button class="btn btn-danger" (click)="borrarHeroe(heroe,i)">
             <i class="fa fa-trash"></i>
           </button>
 
@@ -45,7 +45,7 @@
     </tbody>
   </table>
 
-  <div class="alert alert-info text-center mt-3">
+  <div *ngIf="cargando" class="alert alert-info text-center mt-3 animate__animated animate__fadeIn animate__slow">
     <h4 class="alert-heading">Cargando</h4>
     <p>
         <i class="fa fa-sync-alt fa-spin fa-2x"></i>
@@ -55,7 +55,7 @@
     </p>
   </div>
 
-  <div class="alert alert-warning text-center mt-3">
+  <div *ngIf="!cargando && heroes.length===0" class="alert alert-warning text-center mt-3 animate__animated animate__fadeIn animate__slow">
     <h4 class="alert-heading">No hay registros</h4>
     <p>
         <i class="fa fa-exclamation fa-2x"></i>
