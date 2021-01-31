@@ -36,6 +36,8 @@ export class ChatService {
   }
 
   logout() {
+
+    this.usuario = {};
     this.auth.signOut();
   }
 
@@ -60,11 +62,11 @@ export class ChatService {
 
   agregarMensaje(texto:string){
 
-    //TODO: falta el uid
     let mensaje:Mensaje={
-      nombre: "Demo",
+      nombre: this.usuario.nombre,
       mensaje: texto,
-      fecha: new Date().getTime()
+      fecha: new Date().getTime(),
+      uid: this.usuario.uid
     }
 
     return this.itemsCollection.add(mensaje);
