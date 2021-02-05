@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import Swiper from 'swiper';
 import { Movie } from '../../interfaces/cartelera-response';
 
 @Component({
@@ -6,16 +7,30 @@ import { Movie } from '../../interfaces/cartelera-response';
   templateUrl: './slide.component.html',
   styleUrls: ['./slide.component.css']
 })
-export class SlideComponent implements OnInit {
+export class SlideComponent implements OnInit, AfterViewInit {
 
   @Input() peliculas:Movie[];
+  swiper:Swiper;
 
   constructor() { }
 
   ngOnInit(): void {
+      
+  }
 
-    console.log(this.peliculas);
-    
+  ngAfterViewInit(): void{
+
+    this.swiper = new Swiper('.swiper-container', {
+      loop: true
+    });
+  }
+
+  onSlideNext(){
+    this.swiper.slideNext();
+  }
+
+  onSlidePrev(){
+    this.swiper.slidePrev();
   }
 
 }

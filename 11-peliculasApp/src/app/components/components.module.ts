@@ -4,18 +4,20 @@ import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { SlideComponent } from './slide/slide.component';
+import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent, SlideComponent],
+  declarations: [NavbarComponent, SlideComponent, PeliculasPosterGridComponent],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports:[
     NavbarComponent,
-    SlideComponent
+    SlideComponent,
+    PeliculasPosterGridComponent
   ]
 })
 export class ComponentsModule { }
