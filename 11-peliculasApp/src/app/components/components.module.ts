@@ -7,9 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SlideComponent } from './slide/slide.component';
 import { PeliculasPosterGridComponent } from './peliculas-poster-grid/peliculas-poster-grid.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { CastSlideshowComponent } from './cast-slideshow/cast-slideshow.component';
 
 @NgModule({
-  declarations: [NavbarComponent, SlideComponent, PeliculasPosterGridComponent],
+  declarations: [NavbarComponent, SlideComponent, PeliculasPosterGridComponent, CastSlideshowComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -19,7 +20,8 @@ import { PipesModule } from '../pipes/pipes.module';
   exports:[
     NavbarComponent,
     SlideComponent,
-    PeliculasPosterGridComponent
+    PeliculasPosterGridComponent,
+    CastSlideshowComponent
   ]
 })
 export class ComponentsModule { }
