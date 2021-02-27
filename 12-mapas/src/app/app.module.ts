@@ -8,7 +8,7 @@ import { MaterialModule } from './material.module';
 import { MapaComponent } from './components/mapa/mapa.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { api_google_maps } from '../environments/environment';
+import { api_google_maps } from './variables';
 
 @NgModule({
   declarations: [
