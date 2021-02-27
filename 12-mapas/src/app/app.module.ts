@@ -4,19 +4,25 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { MapaComponent } from './components/mapa/mapa.component';
 
-//Angular material
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { AgmCoreModule } from '@agm/core';
+import { api_google_maps } from '../environments/environment';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MaterialModule,
+    AgmCoreModule.forRoot({
+      apiKey: api_google_maps.apikey
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
