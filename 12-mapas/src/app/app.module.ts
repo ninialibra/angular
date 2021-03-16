@@ -8,8 +8,11 @@ import { MaterialModule } from './material.module';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { MapaEditarComponent } from './components/mapa/mapa-editar.component';
 
+
+
 import { AgmCoreModule } from '@agm/core';
 import { api_google_maps } from './variables';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   entryComponents:[
@@ -25,6 +28,7 @@ import { api_google_maps } from './variables';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: api_google_maps.apikey
     })
