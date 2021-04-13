@@ -1,10 +1,10 @@
-<form class="example-form">
+<form [formGroup]="formu">
     <mat-form-field>
-        <input matInput placeholder="Título">
+        <input matInput placeholder="Título" formControlName="titulo">
     </mat-form-field>
 
     <mat-form-field>
-        <textarea rows="3" matInput placeholder="Descripción"></textarea>
+        <textarea rows="3" matInput placeholder="Descripción" formControlName="desc"></textarea>
     </mat-form-field>
 
     <button (click)="guardarCambios()" mat-raised-button color="primary">Editar</button>
